@@ -13,7 +13,12 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors())
+
+
+app.use(cors({
+  origin: "https://fullstack-blogapp-1.onrender.com",
+  credentials: true,
+}));
 
 dbConnection()
 cloudinaryConnect()
