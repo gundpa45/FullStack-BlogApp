@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import Login from "./components/Login"
-import Signup from "./components/signup"
-import Profile from './components/profile'
+import Signup from "./components/Signup"
+import Profile from './components/Profile'
 import Otp from "./components/Otp"
 import Create from "./components/Create"
 import GetAllBlogs from "./components/GetAllBlogs"
