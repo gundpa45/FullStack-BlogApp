@@ -1,4 +1,4 @@
-const host = 'http://localhost:3000'
+const host = 'https://fullstack-blogapp-2nug.onrender.com'
 
 export const LoginRoutes = `${host}/api/v1/login`
 export const SignUpRoutes = `${host}/api/v1/signup`
