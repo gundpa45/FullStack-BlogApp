@@ -12,7 +12,7 @@ const filter = require("../controllers/SearchFilter")
 
   const storage = multer.memoryStorage();
   const upload = multer({ storage: storage });
-
+const commentController = require("../controllers/comment")
 router.post('/signup',userController.signup)
 router.post('/verifyOtp',userController.verifyOtp)
 router.post('/login',userController.login)
@@ -34,4 +34,6 @@ router.get('/blogs/:id',filter.getBlogDetails)
 router.post('/forgotpassword',userController.getForgotPassword)
 router.put("/updatepassword/:userId",userController.updatePassword)
 router.post("/verifyotpPassword",userController.verifyOtpForPassword)
+router.get("/getcomments/:blogId", commentController.getComments);
+router.post("/comments/:blogId", auth, commentController.postComments);
 module.exports = router
